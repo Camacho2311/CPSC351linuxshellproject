@@ -1,3 +1,24 @@
+/*
+ * CPSC 351: Operating Systems
+ * Students: Alberto Camacho, Logan Brenner
+ * Project: Linux Shell Project
+ * Date: September 29, 2024
+ * 
+ * Description: 
+ * This project implements a simple Linux shell capable of handling basic 
+ * commands, built-in commands (cd, help, mkdir, !!, etc.), and piping 
+ * between commands. The shell allows for command-line input and provides 
+ * feedback through custom processing.
+ * 
+ * Collaboration: 
+ * - ChatGPT for code assistance, clarification, and implementation suggestions.
+ * - GeeksforGeeks for reference on Unix system calls and shell functionalities.
+ * 
+ * This project was created for educational purposes as part of the CPSC 351 
+ * course, focusing on the fundamental concepts of operating systems and 
+ * process management.
+ */
+
 // C Program to design a shell in Linux
 #include<stdio.h>
 #include<string.h>
