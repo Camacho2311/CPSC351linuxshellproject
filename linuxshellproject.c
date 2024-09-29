@@ -197,11 +197,20 @@ int ownCmdHandler(char** parsed, char* lastCommand)
         exit(0);
     case 2:
         if (parsed[1] == NULL) {
-            printf("\ncd: expected argument to 'cd'\n");
+        // If no argument is provided, change to home directory
+        char* home = getenv("HOME");
+        if (home != NULL) {
+            chdir(home);
         } else {
-            chdir(parsed[1]);
+            printf("\ncd: HOME environment variable not set.\n");
         }
-        return 1;
+    } else {
+        // Change to the specified directory
+        if (chdir(parsed[1]) != 0) {
+            perror("cd");
+        }
+    }
+    return 1;
     case 3:
         openHelp();
         return 1;
