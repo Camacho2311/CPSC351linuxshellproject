@@ -151,6 +151,8 @@ void execArgsPiped(char** parsed, char** parsedpipe)
     }
 }
 
+
+//Project requirement 4
 // Help command builtin
 void openHelp()
 {
